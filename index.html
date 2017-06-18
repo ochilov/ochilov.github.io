@@ -30,27 +30,6 @@ Date		: 08.06.2017
 <link href="default_ie6.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 
-<script language="JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-
-<script>
-function showNextNews() {
-    for(i=1;i<=10;i++) {
-		var postDate='18.06.2017';
-		var postHeader='Заголовок новости';
-		var postDesc='Описание новости';
-		var postLogo='images/img03.jpg';
-		var postHref='';
-		var item = '<li class="page-main__feed-element">';
-			item+= '<p class="page-main__feed-element-datetime">'+postDate+'</p>';
-			item+= '<p class="page-main__feed-element-header">'+postHeader+'</p>';
-			item+= '<p class="page-main__feed-element-description"><img class="page-main__feed-element-logo" src="'+postLogo+'" align="left" alt="logo">'+postDesc+'</p>';
-			item+= '<a href="'+postHref+'" class="button-style">Подробнее...</a>';
-		item+= '</li>';
-		//$('#content-feed').append(item);
-    }
-}
-</script>
-
 </head>
 <body>
 <div id="wrapper-bg">
