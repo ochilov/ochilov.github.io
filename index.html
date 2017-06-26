@@ -23,7 +23,7 @@
 		jQuery(document).ready(function() {
 			jQuery('#example-4').click(function(){		
 				jQuery('#example-4').append('<br>feed.json read... start<br>');
-				jQuery.getJSON('feed.json', function(data) {
+				jQuery.getJSON('feed/feed.json', function(data) {
 					jQuery('#example-4').append('feed.json read... ok<br>');
 					jQuery(data.articles).each(function(index, value) {
 						jQuery('#example-4').append('id:' + value.id + ' name:' + value.name + '<br>');
@@ -34,7 +34,7 @@
 			jQuery('#example-5').click(function(){		
 				jQuery('#example-5').append('<br>feed.json read... start<br>');
 				jQuery.ajax({
-					url:'feed.json',
+					url:'feed/feed.json',
 					dataType:'json',
 					type:'get',
 					cache:false,
