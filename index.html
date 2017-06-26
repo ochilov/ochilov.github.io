@@ -3,11 +3,11 @@
 <head>
 	<title>JQuery</title>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<style>
 		.cursor {
 			cursor: pointer;
 		}
-		style.css:52
 		.example {
 			border-top: solid 1px #999;
 			border-left: solid 1px #999;
@@ -18,19 +18,40 @@
 	</style>
 </head>
 <body>
-	<script type="text/javascript">
-		jQuery(document).ready(function(){
-			jQuery('#example-4').click(function(){
-				jQuery.getJSON('feed/feed.json', {}, function(json){
-					jQuery('#example-4').html('');
-					jQuery('#example-4').append('To: '   + json.note.to + '<br/>')
-										.append('From: ' + json.note.from + '<br/>')
-										.append('<b>'    + json.note.heading + '</b><br/>')
-										.append(           json.note.body + '<br/>');
-				});                
-			})
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script>
+		jQuery(document).ready(function() {
+			jQuery('#example-4').click(function(){		
+				jQuery('#example-4').append('<br>feed.json read... start<br>');
+				jQuery.getJSON('feed.json', function(data) {
+					jQuery('#example-4').append('feed.json read... ok<br>');
+					jQuery(data.articles).each(function(index, value) {
+						jQuery('#example-4').append('id:' + value.id + ' name:' + value.name + '<br>');
+					});
+				});
+			});
+			
+			jQuery('#example-5').click(function(){		
+				jQuery('#example-5').append('<br>feed.json read... start<br>');
+				jQuery.ajax({
+					url:'feed.json',
+					dataType:'json',
+					type:'get',
+					cache:false,
+					error:function(){
+						jQuery('#example-5').append('feed.json read... ERROR!<br>');
+					},
+					succes: function(data) {
+						jQuery('#example-5').append('feed.json read... ok<br>');
+						jQuery(data.articles).each(function(index, value) {
+							jQuery('#example-5').append('id:' + value.id + ' name:' + value.name + '<br>');
+						});
+					}
+				});
+			});
 		});
 	</script>
-	<div class="example cursor" id="example-4">Click to load JSON data</div>
+	<div class="example cursor" id="example-4">Загрзука JSON при помощи 'getJSON'</div>
+	<div class="example cursor" id="example-5">Загрзука JSON при помощи 'ajax'</div>
 </body>
 </html>

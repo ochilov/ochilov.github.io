@@ -1,8 +1,17 @@
 {
-    note:{
-        to:'Tove',
-        from:'Jani',
-        heading:'Reminder',
-        body:'Don\'t forget me this weekend!'
-    }
+    "articles": [
+		{
+			"id": 1,
+			"name": "How to build a website"
+		},
+		{
+			"id": 2,
+			"name": "Reading JSON using the jQuery lib"
+		},
+		{
+			"id": 3,
+			"name": "Learning JavaScript"
+		}
+		
+	]
 }
