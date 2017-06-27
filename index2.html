@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JQuery</title>
+	<style>
+		.cursor {
+			cursor: pointer;
+		}
+		.example {
+			border-top: solid 1px #999;
+			border-left: solid 1px #999;
+			border-right: solid 1px #333;
+			border-bottom: solid 1px #333;
+			margin: 10px 0 20px;
+		}
+	</style>
+</head>
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script>
+		jQuery(document).ready(function() {
+			jQuery('#example-4').click(function(){		
+				jQuery('#example-4').append('<br>feed.json read... start<br>');
+				jQuery.getJSON('feed/feed.json', function(data) {
+					jQuery('#example-4').append('feed.json read... ok<br>');
+					jQuery(data.articles).each(function(index, value) {
+						jQuery('#example-4').append('id:' + value.id + ' name:' + value.name + '<br>');
+					});
+				});
+			});
+			
+			jQuery('#example-5').click(function(){		
+				jQuery('#example-5').append('<br>feed.json read... start<br>');
+				jQuery.ajax({
+					url:'feed/feed.json',
+					dataType:'json',
+					type:'get',
+					cache:false,
+					error:function(){
+						jQuery('#example-5').append('feed.json read... ERROR!<br>');
+					},
+					succes: function(data) {
+						jQuery('#example-5').append('feed.json read... ok<br>');
+						jQuery(data.articles).each(function(index, value) {
+							jQuery('#example-5').append('id:' + value.id + ' name:' + value.name + '<br>');
+						});
+					}
+				});
+			});
+		});
+	</script>
+	<div class="example cursor" id="example-4">Загрузка JSON при помощи 'getJSON'</div>
+	<div class="example cursor" id="example-5">Загрузка JSON при помощи 'ajax'</div>
+</body>
+</html>
