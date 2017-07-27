@@ -1,151 +1,112 @@
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>iHerb - совместные покупки. СПб</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet" type="text/css">
-<link href="css/common.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="icon" href="images/favicon.ico">
+	<meta charset="utf-8" />
+	<title>iHerb - совместные покупки. СПб</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/media.css" />
+	<link rel="stylesheet" href="css/fonts.css" />
 <!--[if IE 6]>
 <link href="default_ie6.css" rel="stylesheet" type="text/css" />
 <![endif]-->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-<script>
-function showNextNews() {
-    for(i=1;i<=10;i++) {
-		var postDate='18.06.2017';
-		var postHeader='Заголовок новости';
-		var postDesc='Описание новости';
-		var postLogo='images/img03.jpg';
-		var postHref='';
-		var item = '<li class="page-main__feed-element">';
-			item+= '<p class="page-main__feed-element-datetime">'+postDate+'</p>';
-			item+= '<p class="page-main__feed-element-header">'+postHeader+'</p>';
-			item+= '<p class="page-main__feed-element-description"><img class="page-main__feed-element-logo" src="'+postLogo+'" align="left" alt="logo">'+postDesc+'</p>';
-			item+= '<a href="'+postHref+'" class="button-style">Подробнее...</a>';
-		item+= '</li>';
-		//$('#content-feed').append(item);
-    }
-}
-</script>
-
 </head>
+
 <body>
-<div id="wrapper-bg">
-	<div style="width: 100%; height: 0; border-bottom: 30px solid #458500;">&nbsp;</div>
-	<div id="wrapper">
-		<div id="header" class="container">
-			<div id="logo">
-				<div id = "lbox1">
-					<a href="https://ru.iherb.com">
-						<img src="images/iherb-logo.png" width="194" height="80" alt="iHerb"/>
+<div id="wrapper">
+	<header class="top_header">
+		<div class="header_topline">	
+			<div class="header_topline-logo" style="display: none">				
+				<button class="header_mnu_button">
+					<i class="fa fa-bars"></i>
+				</button>
+				<a href="/">
+					iHerb СПб
+				</a>
+			</div>
+			<div class="soc_buttons">
+				<a href="//vk.com/iherb_sp_spb" target="_blank"><i class="fa fa-vk"></i></a>
+				<a href="//www.instagram.com/iherb_sp_spb/" target="_blank"><i class="fa fa-instagram"></i></a>
+			</div>
+		</div>
+
+		<div class="header_midline">
+			<div class="header_logo">					
+				<button class="main_mnu_button" style="display: none">
+					<i class="fa fa-bars"></i>
+				</button>
+				<div class="header_logo-image">	
+					<a href="/">
+						<img src="images/iherb-logo.png" alt="iHerb"/>
+					</a>		
+				</div>
+				<div class="header_logo-text">
+					<a href="/"><span>Совместные покупки</span><br>Санкт-Петербург
 					</a>
-				</div>	
-				<div id = "lbox2">
-				<h1>
-				<a href="#"><span>Совместные покупки</span><br>Санкт-Петербург</a>
-				</h1>
 				</div>
 			</div>
-			<div id="menu">
-				<ul>
-					<li class="active"><a href="/" accesskey="1" title="">Новости</a></li>
-					<li><a href="zakaz.html" accesskey="2" title="">Заказ</a></li>
-					<li><a href="dostavka.html" accesskey="3" title="">Доставка</a></li>
-					<li><a href="garant.html" accesskey="4" title="">Гарантии</a></li>
-					<li><a href="bestsales.html" accesskey="5" title="">Бестселлеры</a></li>
-					<li><a href="reviews" accesskey="6" title="">Личные отзывы</a></li>
-					<li><a href="contacts.html" accesskey="7" title="">Контакты</a></li>
+			<div class="header_menu">
+				<nav class="main_mnu clearfix">
 
-				</ul>
-			</div>
-		</div>
-		<div id="banner" class="container"> 
-			<span class="long_img"> <img src="images/header-photo.jpg" width="636" height="296" alt="" /> </span>
-			<span class="short_img"> <img src="images/sale-logo.jpg" width="300" height="296" alt="" /> </span>
-		</div>
-
-		</div>
-		<div class="page-main">
-			<div class="page-main__content">
-				<div class="page-main__content-feed">
-					<p class="page-main__feed-header">Новости</p>
-					<ul id="content-feed" class="page-main__feed">
-						<li class="page-main__feed-element">
-							<p class="page-main__feed-element-datetime">18.06.2017</p>
-							<p class="page-main__feed-element-header">iHerb - NatraBio</p>
-							<p class="page-main__feed-element-description"> 
-								<img class="page-main__feed-element-logo" src="feed/2/logo.jpg" align="left" alt="">
-								Жидкое средство для детей для снятия боли при прорезывании зубов, без спирта, 1 жидкая унция (30 мл)<br>
-							</p>
-							<a href="feed/2/index.html" class="button-style">Подробнее...</a>	
-						</li>
-						<li class="page-main__feed-element">
-							<p class="page-main__feed-element-datetime">15.06.2017</p>
-							<p class="page-main__feed-element-header">iHerb - Скидки и недельные акции</p>
-							<p class="page-main__feed-element-description"> 
-								<img class="page-main__feed-element-logo" src="feed/1/logo.jpg" align="left" alt="">
-								Заказ в ближайшее время, записывайтесь<br>
-							</p>
-							<a href="feed/1/index.html" class="button-style">Подробнее...</a>	
-						</li>
+					<ul>
+						<li class="active"><a href="/" accesskey="1" title="">Новости</a></li>
+						<li><a href="order" accesskey="2" title="">Заказ</a></li>
+						<li><a href="shipping" accesskey="3" title="">Доставка</a></li>
+						<li><a href="guaranty" accesskey="4" title="">Гарантии</a></li>
+						<li><a href="bestseller" accesskey="5" title="">Бестселлеры</a></li>
+						<li><a href="reviews" accesskey="6" title="">Личные отзывы</a></li>
+						<li><a href="contacts" accesskey="7" title="">Контакты</a></li>
 					</ul>
-					</ul>
-					<p class="button-style" onclick="showNextNews();">Ещё </p>
-				</div>
+				</nav>
+			</div>	
+		</div>
+	</header>
+	<section class="main_content">
+		<div class="main_content-banner">
+			<div class="main_content-banner_item">
+				<img src="images/banner1.jpg" alt=""/>
+			</div>
+			<div class="main_content-banner_item">
+				<img src="images/banner2.jpg" alt=""/>
 			</div>
 		</div>
-	</div>
-	<footer class="page-footer">
-		<div class="page-footer__envato-bar-content">
-			<div class="page-footer__envato-bar-content-about-us-column">
-				<ul class="page-footer__about-us">
-					<li class="page-footer__about-us-element">
-						О нас	
-					</li>
-					<li class="page-footer__about-us-element">
-	Организация совместных покупок <a href="https://ru.iherb.com/" rel="nofollow">iHerb.com</a> для <strong>САНКТ-ПЕТЕРБУРГА</strong>.<br>
-	Объединяемся и экономим на доставке!<br>
-	Ваши более мелкие заказы я объединяю в один, чтобы получить в итоге бесплатную доставку в Россию. 
-	Если вам нужны тяжёлые товары, которые дают платную доставку, помогу скомбинировать и максимально снизить стоимость доставки. 
-	Цена как на сайте (-5%), без наценки и организаторского сбора. Учитываю все акции, проводимые iherb, кроме реферальной программы. 
-	Помогу сориентироваться на сайте, отвечу на вопросы, посоветую лучшие товары.
-					</li>
-				</ul>
-			</div>
-			<div class="page-footer__envato-bar-content-follow-column">
-				<ul class="page-footer__follow-us">
-					<li class="page-footer__follow-us-element">
-						Контакты	
-					</li>
-					<li class="page-footer__follow-us-element">
-						РОССИЯ, г. Санкт-Петербург
-					</li>
-					<li class="page-footer__follow-us-element">
-						+7 (999) 212-86-47
-					</li>
-					<li class="page-footer__follow-us-element">
-						iherb_sp_spb@mail.ru
-					</li>
-					<li class="page-footer__follow-us-element">
-						<a class="page-footer__social-link page-footer__instagram-link" href="https://www.instagram.com/iherb_sp_spb/"></a>
-					</li>
-					<li class="page-footer__follow-us-element">
-						<a class="page-footer__social-link page-footer__vk-link" href="https://vk.com/iherb_sp_spb"></a>
-					</li>		
-				</ul>	
-			</div>
-			<div class="page-footer__envato-bar-content-disclamer">
-				<p class="page-footer__disclamer">
-				<a href="https://ru.iherb.com/">iHerb.com</a> &copy; Copyright 1997-2017 iHerb Inc. All rights reserved. iHerb® является зарегистрированным товарным знаком iHerb, Inc. Trusted Brands. Healthy Rewards. и the iHerb.com Trusted Brands. Healthy Rewards. Логотип является товарным знаком iHerb, Inc. *Дисклеймер: Продукты и заявления о них, представленные на этом сайте (или через него), не были оценены Управлением по контролю за продуктами и лекарственными препаратами США. Они не предназначены для диагностики, лечения и предотвращения болезней.	</p>			
-			</div>
+		<div class="main_content-label">
+			<h1>Новости</h1>
 		</div>
-	</footer>
+		<div class="main_content-post">
+			<p class="post-datetime">18.06.2017</p>
+			<p class="post-header">iHerb - NatraBio</p>
+			<p class="post-description">
+				<img class="post-logo" src="feed/2/logo.jpg" alt="alt">
+				Жидкое средство для детей для снятия боли при прорезывании зубов, без спирта, 1 жидкая унция (30 мл)
+				dafsdfsfsffesfsefsdfsdfsdfsfsf f sdf dsf sdf sdf sfsdf dsfdsf dsfsd  fsdfdfsdfdsf f sdfdsf fdsfsdfweer32ewefsd
+			</p>
+		</div>
+		<div class="main_content-post">
+			<p class="post-datetime">18.06.2017</p>
+			<p class="post-header">iHerb - NatraBio</p>
+			<p class="post-description">
+				<img class="post-logo" src="feed/2/logo.jpg" alt="alt">
+				Жидкое средство для детей для снятия боли при прорезывании зубов, без спирта, 1 жидкая унция (30 мл)
+				dafsdfsfsffesfsefsdfsdfsdfsfsf f sdf dsf sdf sdf sfsdf dsfdsf dsfsd  fsdfdfsdfdsf f sdfdsf fdsfsdfweer32ewefsd
+			</p>
+		</div>
+	</section>
 </div>
+
+	<script src="libs/jquery/jquery-1.11.1.min.js"></script>
+	<script src="js/common.js"></script>
+	<!-- Yandex.Metrika counter --><!-- Yandex.Metrika counter -->
+	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </body>
 </html>
