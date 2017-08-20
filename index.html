@@ -1,112 +1,26 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
-<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!-->
-<html lang="ru">
-<!--<![endif]-->
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="utf-8" />
-	<title>iHerb - совместные покупки. СПб</title>
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="icon" href="images/favicon.ico">
-	<link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="css/main.css"/>
-	<link rel="stylesheet" href="css/media.css" />
-	<link rel="stylesheet" href="css/fonts.css" />
-<!--[if IE 6]>
-<link href="default_ie6.css" rel="stylesheet" type="text/css" />
-<![endif]-->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Школа Node.JS</title>
+	<style type="text/css">
+		.error {border: 1px solid red}
+		.success{}
+		.progress{}
+	</style>
 </head>
-
 <body>
-<div id="wrapper">
-	<header class="top_header">
-		<div class="header_topline">	
-			<div class="header_topline-logo" style="display: none">				
-				<button class="header_mnu_button">
-					<i class="fa fa-bars"></i>
-				</button>
-				<a href="/">
-					iHerb СПб
-				</a>
-			</div>
-			<div class="soc_buttons">
-				<a href="//vk.com/iherb_sp_spb" target="_blank"><i class="fa fa-vk"></i></a>
-				<a href="//www.instagram.com/iherb_sp_spb/" target="_blank"><i class="fa fa-instagram"></i></a>
-			</div>
-		</div>
+	<form method="post" action="" id="myForm">
+		<input type="text"   name="fio"   placeholder="ФИО"     autocomplete="off" /><br/>
+		<input type="text"   name="email" placeholder="Email"   autocomplete="off" /><br/>
+		<input type="text"   name="phone" placeholder="Телефон" autocomplete="off" /><br/>
+		<input type="button" name="sbbtn" value="Отправить" id="submitButton" onclick="MyForm.submit()"/><br/>
+	</form>
+	
+	<div id="resultContainer"></div>
 
-		<div class="header_midline">
-			<div class="header_logo">					
-				<button class="main_mnu_button" style="display: none">
-					<i class="fa fa-bars"></i>
-				</button>
-				<div class="header_logo-image">	
-					<a href="/">
-						<img src="images/iherb-logo.png" alt="iHerb"/>
-					</a>		
-				</div>
-				<div class="header_logo-text">
-					<a href="/"><span>Совместные покупки</span><br>Санкт-Петербург
-					</a>
-				</div>
-			</div>
-			<div class="header_menu">
-				<nav class="main_mnu clearfix">
-
-					<ul>
-						<li class="active"><a href="/" accesskey="1" title="">Новости</a></li>
-						<li><a href="order" accesskey="2" title="">Заказ</a></li>
-						<li><a href="shipping" accesskey="3" title="">Доставка</a></li>
-						<li><a href="guaranty" accesskey="4" title="">Гарантии</a></li>
-						<li><a href="bestseller" accesskey="5" title="">Бестселлеры</a></li>
-						<li><a href="reviews" accesskey="6" title="">Личные отзывы</a></li>
-						<li><a href="contacts" accesskey="7" title="">Контакты</a></li>
-					</ul>
-				</nav>
-			</div>	
-		</div>
-	</header>
-	<section class="main_content">
-		<div class="main_content-banner">
-			<div class="main_content-banner_item">
-				<img src="images/banner1.jpg" alt=""/>
-			</div>
-			<div class="main_content-banner_item">
-				<img src="images/banner2.jpg" alt=""/>
-			</div>
-		</div>
-		<div class="main_content-label">
-			<h1>Новости</h1>
-		</div>
-		<div class="main_content-post">
-			<p class="post-datetime">18.06.2017</p>
-			<p class="post-header">iHerb - NatraBio</p>
-			<p class="post-description">
-				<img class="post-logo" src="feed/2/logo.jpg" alt="alt">
-				Жидкое средство для детей для снятия боли при прорезывании зубов, без спирта, 1 жидкая унция (30 мл)
-				dafsdfsfsffesfsefsdfsdfsdfsfsf f sdf dsf sdf sdf sfsdf dsfdsf dsfsd  fsdfdfsdfdsf f sdfdsf fdsfsdfweer32ewefsd
-			</p>
-		</div>
-		<div class="main_content-post">
-			<p class="post-datetime">18.06.2017</p>
-			<p class="post-header">iHerb - NatraBio</p>
-			<p class="post-description">
-				<img class="post-logo" src="feed/2/logo.jpg" alt="alt">
-				Жидкое средство для детей для снятия боли при прорезывании зубов, без спирта, 1 жидкая унция (30 мл)
-				dafsdfsfsffesfsefsdfsdfsdfsfsf f sdf dsf sdf sdf sfsdf dsfdsf dsfsd  fsdfdfsdfdsf f sdfdsf fdsfsdfweer32ewefsd
-			</p>
-		</div>
-	</section>
-</div>
-
-	<script src="libs/jquery/jquery-1.11.1.min.js"></script>
-	<script src="js/common.js"></script>
-	<!-- Yandex.Metrika counter --><!-- Yandex.Metrika counter -->
-	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="index.js"></script>
 </body>
+
 </html>
