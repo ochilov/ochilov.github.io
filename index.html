@@ -1,26 +1,270 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html lang="ru">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Школа Node.JS</title>
-	<style type="text/css">
-		.error {border: 1px solid red}
-		.success{}
-		.progress{}
-	</style>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Умиджон Очилов. macOS/iOS разработчик</title>
+    <link rel="icon" href="favicon-192.png" type="image/x-png"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<form method="post" action="" id="myForm">
-		<input type="text"   name="fio"   placeholder="ФИО"     autocomplete="off" /><br/>
-		<input type="text"   name="email" placeholder="Email"   autocomplete="off" /><br/>
-		<input type="text"   name="phone" placeholder="Телефон" autocomplete="off" /><br/>
-		<input type="button" name="sbbtn" value="Отправить" id="submitButton" onclick="MyForm.submit()"/><br/>
-	</form>
-	
-	<div id="resultContainer"></div>
+<div class="container page">
+    <a href=https://github.com/ochilov class="github-corner screen" aria-label="View source on Github">
+        <svg width="80" height="80" viewBox="0 0 250 250"
+             style="fill:#deeef9; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path
+                d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+            <path
+                d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                fill="currentColor" class="octo-body"></path>
+        </svg>
+    </a>
+    <style>
+        .github-corner:hover .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
 
-	<script src="jquery-3.2.1.min.js"></script>
-	<script src="index.js"></script>
+        @keyframes octocat-wave {
+            0%, 100% {
+                transform: rotate(0)
+            }
+            20%, 60% {
+                transform: rotate(-25deg)
+            }
+            40%, 80% {
+                transform: rotate(10deg)
+            }
+        }
+
+        @media (max-width: 500px) {
+            .github-corner:hover .octo-arm {
+                animation: none
+            }
+
+            .github-corner .octo-arm {
+                animation: octocat-wave 560ms ease-in-out
+            }
+        }
+    </style>
+    <div class="row">
+        <div class="col-md-6 col-print-6">
+            <h1>Умиджон Очилов</h1>
+            <h3>macOS/iOS разработчик</h3>
+            <p>
+                <time datetime="" class="text-muted">Обновлено: May 15, 2021</time>
+            </p>
+            <p>
+                <span class="screen"><a href="umidzhon-ochilov.macos-ios-razrabotchik.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>PDF версия</a></span>
+                <span class="print">Онлайн версия доступна по ссылке <a href="https://ochilov.github.io" class="text-nowrap"><i
+                    class="fa fa-github" aria-hidden="true"></i>https://ochilov.github.io</a></span>
+            </p>
+        </div>
+        <div class="col-md-6 col-print-6">
+            <dl class="row">
+                <dt class="col-md-3 text-md-right text-print-right font-weight-normal">Город:</dt>
+                <dd class="col-md-9"><a href="https://goo.gl/maps/LACkjuBeeSfaGYF77">
+    <i class="fa fa-home fact-icon"></i>
+    Санкт-Петербург, РОССИЯ
+</a></dd>
+                <dt class="col-md-3 text-md-right text-print-right font-weight-normal">Телефон:</dt>
+                <dd class="col-md-9"><a href="tel:+7 (952) 233 - xx xx"
+    <i class="fas fa-mobile-alt fact-icon"></i>
+    +7 (952) 233 - xx xx
+</a></dd>
+                <dt class="col-md-3 text-md-right text-print-right font-weight-normal">GitHub:</dt>
+                <dd class="col-md-9"><a href="https://github.com/ochilov">
+    <i class="fab fa-github fact-icon"></i>
+    <span class="print">https://github.com/ochilov</span>
+    <span class="screen">ochilov</span>
+</a></dd>
+                <dt class="col-md-3 text-md-right text-print-right font-weight-normal">Email:</dt>
+                <dd class="col-md-9"><a href="mailto:neo.trion@gmail.com">
+    <i class="fas fa-envelope fact-icon"></i>
+    neo.trion@gmail.com
+</a></dd>
+            </dl>
+        </div>
+    </div>
+
+    <h3 class="screen">Навыки</h3>
+    <div class="row mb-4">
+        <div class="col-print-1 col-3 col-md-2 col-lg-1 text-right">
+            <small>C++</small>
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1">
+            ++++
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1 text-right">
+            <small>C#</small>
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1">
+            +++
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1 text-right">
+            <small>ObjC</small>
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1">
+            ++++
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1 text-right">
+            <small>Swift</small>
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1">
+            +++
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1 text-right">
+            <small>Python</small>
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1">
+            ++
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1 text-right">
+            <small>Appkit</small>
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1">
+            ++++
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1 text-right">
+            <small>UIKit</small>
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1">
+            ++++
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1 text-right">
+            <small>SwiftUI</small>
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1">
+            +++
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1 text-right">
+            <small>WPF</small>
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1">
+            ++
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1 text-right">
+            <small>SQLite</small>
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1">
+            +++
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1 text-right">
+            <small>Git</small>
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1">
+            ++++
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1 text-right">
+            <small>HTML/CSS</small>
+        </div>
+        <div class="col-print-1 col-3 col-md-2 col-lg-1">
+            +++
+        </div>
+    </div>
+
+    <p>
+        Занимаюсь разработкой приложений под macOS/iOS. Участвовал в проекте, где модули написаны как на Swift, так и на Objective-C и C++.
+Работал с AppKit и UIKit, изучаю SwiftUI.
+
+    </p>
+
+    <h2>Опыт работы</h2>
+    <div class="card mb-4">
+        <div class="card-body">
+            <h3>Siber Systems Inc</h3>
+            <p>macOS разработчик</p>
+            <p class="text-muted">с Ноября 2019</p>
+
+            <p>Поддержка и развитие macOS версии Менеджера паролей - мультиплатформенный продукт для хранения данных в зашифрованном виде (пароли, контакты, заметки, закладки).
+Для каждой платформы имеется нативное приложение и расширения для браузеров. Продукт позволяет синхрониизировать данные, заполнять формы на веб страницах и автоматически сохранять данные новых форм.</p>
+
+            <div>
+                <span class="badge badge-primary">XCode</span>
+                <span class="badge badge-primary">C++</span>
+                <span class="badge badge-primary">Objective-C</span>
+                <span class="badge badge-primary">Swift</span>
+                <span class="badge badge-primary">TS</span>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-body">
+            <h3>OOO Горэлтех</h3>
+            <p>Windows разработчик</p>
+            <p class="text-muted">Январь 2014 - Ноябрь 2019 (5 лет 11 месяцев)</p>
+
+            <p>Разработка и поддержка программного обеспечения для автоматической конфигурации продукции для заказа.
+Данное ПО позволяет в режиме реального времени подобрать из каталога компонентов конфигурацию конечного изделия,
+а также сформировать конструкторскую документацию.
+Программа следит за корректностью параметров конечного изделия в режиме реально времени, просчитывает дополнительные варианты и контролирует корректность подбираемых компонентов.</p>
+
+            <div>
+                <span class="badge badge-primary">RAD Studio</span>
+                <span class="badge badge-primary">C++</span>
+                <span class="badge badge-primary">WinForms</span>
+                <span class="badge badge-primary">SQlite</span>
+                <span class="badge badge-primary">STL</span>
+                <span class="badge badge-primary">OpenGL</span>
+                <span class="badge badge-primary">GDI+</span>
+                <span class="badge badge-primary">DXF</span>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-body">
+            <h3>OAO Завод Ленинец</h3>
+            <p>Инженер схемотехник / программист ПЛИС</p>
+            <p class="text-muted">Май 2011 - Декабрь 2013 (2 года 7 месяцев)</p>
+
+            <p>Разработано устройство измерения разности фаз двух радиосигналов. 
+Поступающие сигналы оцифровываются в цифровом блоке и далее обрабатываются и кодируются. 
+Для обработки сигналов использутся алгоритмы фильтрации цифровых сигналов.</p>
+
+            <div>
+                <span class="badge badge-primary">QuartusII</span>
+                <span class="badge badge-primary">Verilog</span>
+                <span class="badge badge-primary">NIOS</span>
+                <span class="badge badge-primary">Multisim</span>
+                <span class="badge badge-primary">Matlab</span>
+                <span class="badge badge-primary">P-CAD</span>
+                <span class="badge badge-primary">AutoCAD</span>
+                <span class="badge badge-primary">SolidWorks</span>
+            </div>
+        </div>
+    </div>
+
+    <h2>Образование</h2>
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5>СПбГУАП</h5>
+            <p class="text-muted">2012 - 2016</p>
+            <p>Факультет вычислительных систем и программирования, Аспирантура</p>
+        </div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5>СПбГУАП</h5>
+            <p class="text-muted">2007 - 2012</p>
+            <p>Компьютерное проектирование авиационных приборов и комплексов, Специалист</p>
+        </div>
+    </div>
+
+    <h2>Проекты</h2>
+    <ul>
+        <li>
+            <a href=https://github.com/ochilov/NBPlayers>National Basketball Association app (Swift)</a>
+        </li>
+        <li>
+            <a href=https://github.com/ochilov/geometry>Simple 2D geomentry library (C++)</a>
+        </li>
+        <li>
+            <a href=https://github.com/ochilov/practice>Other projects (C++)</a>
+        </li>
+    </ul>
+</div>
 </body>
-
 </html>
